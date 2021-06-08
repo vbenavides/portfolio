@@ -5,6 +5,7 @@ import { srConfig } from '../../config';
 import sr from '../../utils/sr';
 import Icon from '../icons/icon';
 import usePrefersReducedMotion from '../../hooks/usePrefersReducedMotion';
+
 const StyledProjectsGrid = styled.ul`
   ${({ theme }) => theme.mixins.resetList};
 
