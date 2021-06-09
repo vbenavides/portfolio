@@ -20,37 +20,35 @@ module.exports = {
       date: '2021-06-03',
       title: 'Help Desk Senior',
       company: 'Generali',
-      location: 'Ecuador, GYE',
+      location: 'Ecuador, Guayaquil',
       range: 'May 2017 - Present',
       url: 'https://www.generali.com.ec/',
-      detail1:
-        'Lorem ipsum dolor sit, amet consectetur adipisicin elit Perferendis ex dolore accusamus earum esse corporis tempore quaerat praesentium culpa dolor.',
+      detail1: 'Firewall, antivirus and windows servers management.',
       detail2:
-        'Lorem ipsum dolor sit, amet consectetur adipisicin elit Perferendis ex dolore accusamus earum esse corporis tempore quaerat praesentium culpa dolor.',
+        'Implementation of security policies and review of user permissions.',
       detail3:
-        'Lorem ipsum dolor sit, amet consectetur adipisicin elit Perferendis ex dolore accusamus earum esse corporis tempore quaerat praesentium culpa dolor.',
+        'Correction of vulnerabilities to prevent loss of service to guarantee permanent operability.',
     },
     {
       date: '2021-06-03',
-      title: 'Help Desk Senior',
-      company: 'Generali',
-      location: 'Ecuador, GYE',
-      range: 'May 2017 - Present',
-      url: 'https://www.generali.com.ec/',
+      title: 'Internet Technical Support',
+      company: 'Dexcall',
+      location: 'Ecuador, Guayaquil',
+      range: 'Nov 2016 - May 2017',
+      url: 'http://www.dexcall.com/',
       detail1:
-        'Lorem ipsum dolor sit, amet consectetur adipisicin elit Perferendis ex dolore accusamus earum esse corporis tempore quaerat praesentium culpa dolor.',
-      detail2:
-        'Lorem ipsum dolor sit, amet consectetur adipisicin elit Perferendis ex dolore accusamus earum esse corporis tempore quaerat praesentium culpa dolor.',
+        'Verification of connection parameters and service interference.',
+      detail2: 'Scheduling and monitoring of repair orders.',
       detail3:
-        'Lorem ipsum dolor sit, amet consectetur adipisicin elit Perferendis ex dolore accusamus earum esse corporis tempore quaerat praesentium culpa dolor.',
+        'Connection tests and configurations using the platforms to prevent service outages.',
     },
     {
       date: '2021-06-03',
-      title: 'Help Desk Senior',
-      company: 'Generali',
+      title: 'Computer Technician',
+      company: 'Freelancer',
       location: 'Ecuador, GYE',
-      range: 'May 2017 - Present',
-      url: 'https://www.generali.com.ec/',
+      range: 'Feb 2013 - Nov 2016',
+      url: '#jobs',
       detail1:
         'Lorem ipsum dolor sit, amet consectetur adipisicin elit Perferendis ex dolore accusamus earum esse corporis tempore quaerat praesentium culpa dolor.',
       detail2:
@@ -85,19 +83,19 @@ module.exports = {
   navLinks: [
     {
       name: 'About',
-      url: '/#about',
+      url: '#about',
     },
     {
       name: 'Experience',
-      url: '/#jobs',
+      url: '#jobs',
     },
     {
       name: 'Work',
-      url: '/#projects',
+      url: '#projects',
     },
     {
       name: 'Contact',
-      url: '/#contact',
+      url: '#contact',
     },
   ],
 

@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styled, { css } from 'styled-components';
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
+import { loaderDelay } from '../utils/index';
+import useScrollDirection from '../hooks/useScrollDirection';
+import Menu from '../components/Menu';
+import PropTypes from 'prop-types';
 import { navLinks } from '../config';
 import { Link } from 'react-router-dom';
-// import mixins from '../styles/mixins';
 
 const StyledHeader = styled.header`
   ${({ theme }) => theme.mixins.flexBetween}
@@ -26,26 +30,26 @@ const StyledHeader = styled.header`
     padding: 0 25px;
   }
 
-  /* @media (prefers-reduced-motion: no-preference) {
+  @media (prefers-reduced-motion: no-preference) {
     ${(props) =>
-    props.scrollDirection === 'up' &&
-    !props.scrolledToTop &&
-    css`
-      height: var(--nav-scroll-height);
-      transform: translateY(0px);
-      background-color: rgba(10, 25, 47, 0.85);
-      box-shadow: 0 10px 30px -10px var(--navy-shadow);
-    `};
+      props.scrollDirection === 'up' &&
+      !props.scrolledToTop &&
+      css`
+        height: var(--nav-scroll-height);
+        transform: translateY(0px);
+        background-color: rgba(10, 25, 47, 0.85);
+        box-shadow: 0 10px 30px -10px var(--navy-shadow);
+      `};
 
     ${(props) =>
-    props.scrollDirection === 'down' &&
-    !props.scrolledToTop &&
-    css`
-      height: var(--nav-scroll-height);
-      transform: translateY(calc(var(--nav-scroll-height) * -1));
-      box-shadow: 0 10px 30px -10px var(--navy-shadow);
-    `};
-  } */
+      props.scrollDirection === 'down' &&
+      !props.scrolledToTop &&
+      css`
+        height: var(--nav-scroll-height);
+        transform: translateY(calc(var(--nav-scroll-height) * -1));
+        box-shadow: 0 10px 30px -10px var(--navy-shadow);
+      `};
+  }
 `;
 
 const StyledNav = styled.nav`
@@ -61,8 +65,10 @@ const StyledNav = styled.nav`
     ${({ theme }) => theme.mixins.flexCenter}
 
     a {
+      display: flex;
+      align-items: center;
       color: var(--green);
-      width: 42px;
+      width: 161px;
       height: 42px;
 
       &:hover,
@@ -120,11 +126,36 @@ const Styledlinks = styled.div`
   }
 `;
 
-const Nav = () => {
+const Nav = ({ isHome }) => {
+  const [isMounted, setIsMounted] = useState(!isHome);
+  const scrollDirection = useScrollDirection('down');
+  const [scrolledToTop, setScrolledToTop] = useState(true);
+
+  const handleScroll = () => {
+    setScrolledToTop(window.pageYOffset < 50);
+  };
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setIsMounted(true);
+    }, 100);
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      clearTimeout(timeout);
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  const timeout = isHome ? loaderDelay : 0;
+  const fadeClass = isHome ? 'fade' : '';
+  const fadeDownClass = isHome ? 'fadedown' : '';
+
   const Logo = (
     <div className='logo' tabIndex='-1'>
       <a href='/' aria-label='home'>
-        vbenavides
+        {`<vbenavides/>`}
       </a>
     </div>
   );
@@ -141,24 +172,78 @@ const Nav = () => {
   );
 
   return (
-    <StyledHeader>
+    <StyledHeader
+      scrollDirection={scrollDirection}
+      scrolledToTop={scrolledToTop}
+    >
       <StyledNav>
-        {Logo}
+        <TransitionGroup component={null}>
+          {isMounted && (
+            <CSSTransition classNames={fadeClass} timeout={timeout}>
+              <div className='logo' tabIndex='-1'>
+                {isHome ? (
+                  <a href='/' aria-label='home'>
+                    {Logo}
+                  </a>
+                ) : (
+                  <a href='/' aria-label='home'>
+                    {Logo}
+                  </a>
+                )}
+              </div>
+            </CSSTransition>
+          )}
+        </TransitionGroup>
+
+        {/* {Logo} */}
         <Styledlinks>
           <ol>
-            {navLinks.map(({ url, name }, i) => {
-              return (
-                <li key={i}>
-                  <Link to={url}>{name}</Link>
-                </li>
-              );
-            })}
+            <TransitionGroup component={null}>
+              {isMounted &&
+                navLinks &&
+                navLinks.map(({ url, name }, i) => (
+                  <CSSTransition
+                    key={i}
+                    classNames={fadeDownClass}
+                    timeout={timeout}
+                  >
+                    <li key={i}>
+                      <a href={url}>{name}</a>
+                    </li>
+                  </CSSTransition>
+                ))}
+            </TransitionGroup>
           </ol>
-          <div>{ResumeLink}</div>
+
+          <TransitionGroup component={null}>
+            {isMounted && (
+              <CSSTransition classNames={fadeDownClass} timeout={timeout}>
+                <div
+                  style={{
+                    transitionDelay: `${isHome ? navLinks.length * 100 : 0}ms`,
+                  }}
+                >
+                  {ResumeLink}
+                </div>
+              </CSSTransition>
+            )}
+          </TransitionGroup>
         </Styledlinks>
+
+        <TransitionGroup component={null}>
+          {isMounted && (
+            <CSSTransition classNames={fadeClass} timeout={timeout}>
+              <Menu />
+            </CSSTransition>
+          )}
+        </TransitionGroup>
       </StyledNav>
     </StyledHeader>
   );
+};
+
+Nav.propTypes = {
+  isHome: PropTypes.bool,
 };
 
 export default Nav;
