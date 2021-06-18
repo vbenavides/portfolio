@@ -50,11 +50,11 @@ module.exports = {
       range: 'Feb 2013 - Nov 2016',
       url: '#jobs',
       detail1:
-        'Lorem ipsum dolor sit, amet consectetur adipisicin elit Perferendis ex dolore accusamus earum esse corporis tempore quaerat praesentium culpa dolor.',
+        'Detection of problems and change of damaged parts of computers.',
       detail2:
-        'Lorem ipsum dolor sit, amet consectetur adipisicin elit Perferendis ex dolore accusamus earum esse corporis tempore quaerat praesentium culpa dolor.',
+        'Installation and modification of office programs for private institutions.',
       detail3:
-        'Lorem ipsum dolor sit, amet consectetur adipisicin elit Perferendis ex dolore accusamus earum esse corporis tempore quaerat praesentium culpa dolor.',
+        'Implementation of local area networks in small businesses and maintenance plans.',
     },
   ],
   projects: [

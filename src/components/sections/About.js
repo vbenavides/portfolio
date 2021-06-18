@@ -117,11 +117,11 @@ const StyledText = styled.div`
 
 const skills = [
   'JavaScript (ES6+)',
+  'Responsive Design',
+  'Webpack',
+  'React Hooks',
   'React',
-  'Eleventy',
-  'Vue',
-  'Node.js',
-  'WordPress',
+  'Styled Componets',
 ];
 
 const About = () => {
@@ -145,17 +145,18 @@ const About = () => {
           <div>
             <p>
               Hello! My name is Vicente and I enjoy creating things that live on
-              the internet. Lorem ipsum dolor sit, amet consectetur adipisicing
-              elit. Perferendis ex, dolore accusamus earum esse corporis tempore
-              quaerat praesentium culpa dolor. Voluptatum reiciendis at iste
-              corporis quidem atque deleniti optio ducimus?
+              the internet. It all started with a great fascination about
+              informatic security, but along the way, as I tried to understand
+              pentesting scripts and modify them, I realized that I am really
+              passionate about creating things with code. From that moment on,
+              my interest in code and specifically web development grew bigger
+              and bigger, to be able to create applications that generate value
+              and fulfill a specific purpose.
             </p>
 
             <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut ullam
-              dolor delectus voluptate harum unde dolorum eveniet perspiciatis,
-              at temporibus optio corporis in illum sint, porro mollitia, facere
-              nulla natus!
+              My ideal is that everything can be learned with enough effort and
+              dedication.
             </p>
 
             <p>Here are a few technologies I've been working with recently:</p>

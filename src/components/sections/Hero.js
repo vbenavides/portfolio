@@ -48,10 +48,10 @@ const Hero = () => {
   const three = <h3 className='big-heading'>I build things for the web.</h3>;
   const four = (
     <p>
-      I'm a Ecuador-based web developer who specializes in building exceptional
-      digital experiences with Javascript. I'm passionate about modern web
-      technologies which allow us to create scalable and quickly upgradable
-      applications.
+      I'm a Ecuador-based Frontend developer who specializes in building
+      exceptional digital experiences with Javascript. I'm passionate about
+      modern web technologies which allow us to create scalable and quickly
+      upgradable applications.
     </p>
   );
   const five = (
