@@ -60,23 +60,33 @@ module.exports = {
   projects: [
     {
       date: '1',
-      title: 'Poke Api',
-      cover: 'pokeapi-small.png',
-      github: 'https://github.com/vbenavides/pokeapi',
-      external: 'https://pokeapi-sable.vercel.app/',
-      tech: ['React', 'React', 'React', 'React'],
+      title: 'MyStore',
+      cover: 'mystore.jpg',
+      github: 'https://github.com/vbenavides/MaterRacePc',
+      external: 'https://mystore-rh.web.app/',
+      tech: ['React', 'StyledComponets', 'Hooks', 'Paypal-Api'],
       details:
-        'Lorem ipsum dolor sit, amet consectetur adipisicin elit Perferendis ex dolore accusamus earum esse corporis tempore quaerat praesentium culpa dolor.',
+        'Site designed as an online store for computer parts, this project uses Api Payment (PayPal), Hooks that are used: useState, useEffect, useMemo, useRef.',
     },
     {
-      date: '1',
+      date: '2',
       title: 'Poke Api',
       cover: 'pokeapi-small.png',
       github: 'https://github.com/vbenavides/pokeapi',
       external: 'https://pokeapi-sable.vercel.app/',
-      tech: ['React', 'React', 'React', 'React'],
+      tech: ['React', 'useContext', 'Hooks'],
       details:
-        'Lorem ipsum dolor sit, amet consectetur adipisicin elit Perferendis ex dolore accusamus earum esse corporis tempore quaerat praesentium culpa dolor.',
+        'Pokedex project, the pokemons api is used to obtain each pokemon and display it in an orderly way, also a search button is implemented.',
+    },
+    {
+      date: '3',
+      title: 'Rick and Morty',
+      cover: 'rick-and-morty.jpg',
+      github: 'https://github.com/vbenavides/rick-and-morty-api',
+      external: 'https://rick-and-morty-api-six.vercel.app/',
+      tech: ['React', 'Api'],
+      details:
+        'This is a simple project that queries an API and displays the results on the screen.',
     },
   ],
 

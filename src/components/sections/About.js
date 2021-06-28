@@ -145,18 +145,19 @@ const About = () => {
           <div>
             <p>
               Hello! My name is Vicente and I enjoy creating things that live on
-              the internet. It all started with a great fascination about
-              informatic security, but along the way, as I tried to understand
-              pentesting scripts and modify them, I realized that I am really
-              passionate about creating things with code. From that moment on,
-              my interest in code and specifically web development grew bigger
-              and bigger, to be able to create applications that generate value
-              and fulfill a specific purpose.
+              the internet. I am a Web Developer with a passion for creating
+              things that live on the Internet, I have worked during my
+              professional career in computer security and mostly in the
+              development of web applications. I firmly trust that with the use
+              of the internet we have access to all the information in the world
+              and that everything can be learned with enough effort and
+              dedication. I like to create applications that generate value and
+              fulfill a specific purpose.
             </p>
 
             <p>
-              My ideal is that everything can be learned with enough effort and
-              dedication.
+              I am autodidact by vocation, something that allows me to learn new
+              technologies and solve problems as soon as possible.
             </p>
 
             <p>Here are a few technologies I've been working with recently:</p>
