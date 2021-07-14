@@ -60,6 +60,16 @@ module.exports = {
   projects: [
     {
       date: '1',
+      title: 'Netflox',
+      cover: 'netflox.png',
+      github: 'https://github.com/vbenavides/netflox',
+      external: 'https://netflox-one.vercel.app/',
+      tech: ['React', 'StyledComponets', 'TMDB API', 'YouTube API'],
+      details:
+        'Site designed to see movie trailers, TMDB API is used to bring the data and be able to display it on the screen together with the use of css techniques.',
+    },
+    {
+      date: '2',
       title: 'MyStore',
       cover: 'mystore.jpg',
       github: 'https://github.com/vbenavides/MaterRacePc',
@@ -69,7 +79,7 @@ module.exports = {
         'Site designed as an online store for computer parts, this project uses Api Payment (PayPal), Hooks that are used: useState, useEffect, useMemo, useRef.',
     },
     {
-      date: '2',
+      date: '3',
       title: 'Poke Api',
       cover: 'pokeapi-small.png',
       github: 'https://github.com/vbenavides/pokeapi',
@@ -79,7 +89,7 @@ module.exports = {
         'Pokedex project, the pokemons api is used to obtain each pokemon and display it in an orderly way, also a search button is implemented.',
     },
     {
-      date: '3',
+      date: '4',
       title: 'Rick and Morty',
       cover: 'rick-and-morty.jpg',
       github: 'https://github.com/vbenavides/rick-and-morty-api',
