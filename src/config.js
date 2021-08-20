@@ -61,7 +61,7 @@ module.exports = {
     {
       date: '1',
       title: 'Netflox',
-      cover: 'netflox.png',
+      cover: 'netflox.jpg',
       github: 'https://github.com/vbenavides/netflox',
       external: 'https://netflox-one.vercel.app/',
       tech: ['React', 'StyledComponets', 'TMDB API', 'YouTube API'],
